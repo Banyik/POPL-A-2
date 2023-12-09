@@ -97,13 +97,8 @@ MODULE C_MATH
         FUNCTION MAP_POW(ARRAY, LEN) RESULT(RESULT)
             REAL, INTENT(IN) :: ARRAY(:)
             INTEGER, INTENT(IN) :: LEN
-            INTEGER :: I
             REAL :: RESULT(LEN)
-        
-            RESULT = 0
-            DO I = 1, LEN
-                RESULT(I) = ARRAY(I)**2
-            END DO
+            RESULT = ARRAY**2
         END FUNCTION MAP_POW
 
         FUNCTION EVEN(ARRAY, LEN) RESULT(RESULT)
